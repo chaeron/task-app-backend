@@ -6,25 +6,27 @@
   "scripts": {
     "start": "nodemon --no-deprecation src/index.js",
     "test": "lab --verbose --assert code --coverage",
-    "db:seed": "node src/utils/seed.js"
+    "db:seed": "node src/utils/seed.js",
+    "db:addUsers": "node src/utils/addUsers.js"
   },
   "author": "Connor Leech",
   "license": "ISC",
   "dependencies": {
-    "bcrypt": "3.0.0",
+    "bcrypt": "^3.0.4",
     "bluebird": "^3.5.3",
-    "boom": "^7.2.0",
-    "dotenv": "^6.1.0",
-    "glue": "^5.0.0",
-    "hapi": "^17.5.4",
-    "hapi-auth-jwt2": "^8.1.0",
-    "jsonwebtoken": "^8.4.0",
+    "boom": "^7.3.0",
+    "dotenv": "^6.2.0",
+    "glue": "^6.0.0",
+    "hapi": "^18.1.0",
+    "hapi-auth-jwt2": "^8.3.0",
+    "jsonwebtoken": "^8.5.0",
     "lodash": "^4.17.11",
     "mailgun-js": "^0.22.0",
-    "mongoose": "^5.3.12"
+    "mongoose": "^5.4.17",
+    "nodemon": "^1.18.10"
   },
   "devDependencies": {
-    "code": "^5.2.0",
-    "lab": "^16.1.0"
+    "code": "^5.2.4",
+    "lab": "^18.0.2"
   }
 }

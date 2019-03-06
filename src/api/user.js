@@ -78,13 +78,15 @@ const userApi = {
 
         delete user.password;
 
+		// console.log( "User:"+ JSON.stringify( user ) + " token: " + token );
+
         return {
           token,
           user
         };
 
       } catch (err) {
-        Boom.badImplementation(err);
+        return Boom.badImplementation(err);
       }
     }
   }

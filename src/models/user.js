@@ -19,15 +19,16 @@ const userModel = mongoose.Schema({
   timestamps: true
 });
 
-userModel.pre('save', (next) => {
+
+userModel.pre('save', function (next) {
   var user = this;
 
   if (!this.password){
-    next();
+	next();
   } else {
     utils.hashPassword(this.password)
       .then((hash)=>{
-        user.password = hash;
+		user.password = hash;
         next();
       })
       .catch(e => console.error(e));
@@ -35,5 +36,6 @@ userModel.pre('save', (next) => {
 
 
 });
+
 
 module.exports = mongoose.model('User', userModel);
